@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Navigation Bar prototype</title>
+    <link rel="stylesheet" type="text/css" href="/assets/styles/salesforce-lightning-design-system.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/NavigationHeader.css" />
+    <style>
+        html {
+            background: white;
+        }
+    </style>
+</head>
+
+<body class="slds">
+    <div class="THIS imd-nav-header">
+        <!-- IMD Header -->
+        <div class="imd-header">
+            <header class="slds-global-header_container slds-show_medium">
+                <a href="javascript:void(0);" class="slds-assistive-text slds-assistive-text_focus">Skip to Navigation</a>
+                <a href="javascript:void(0);" class="slds-assistive-text slds-assistive-text_focus">Skip to Main Content</a>
+                <div class="slds-global-header slds-grid slds-grid_align-spread">
+                    <div class="slds-global-header__item">
+                        <div class="imd-global-header__logo"></div>
+                    </div>
+                    <div class="slds-global-header__item slds-global-header__item_search">
+                        <div aria-expanded="false" aria-haspopup="listbox" class="slds-form-element slds-lookup" role="combobox">
+                            <label class="slds-assistive-text" for="global-search-01">Search Salesforce</label>
+                            <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left-right">
+                                <svg class="slds-input__icon slds-input__icon_left" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search" />
+                                </svg>
+                                <input type="text" aria-autocomplete="list" aria-controls="global-search-list-01" autocomplete="off" class="slds-input slds-lookup__search-input"
+                                    id="global-search-01" placeholder="Search in the personnal space" role="textbox" />
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="slds-global-header__item slds-grid slds-grid_vertical-align-center">
+                        <li class="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_x-small">
+                            <button class="slds-button" title="person name" aria-haspopup="true">
+                                <svg class="slds-avatar slds-avatar_circle slds-avatar_medium" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/action-sprite/svg/symbols.svg#user" />
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+        </div>
+        <!-- /IMD Header -->
+        <!-- navigagion goes here -->
+        <div class="slds-context-bar">
+            <div class="slds-context-bar__primary slds-hide_medium">
+                <div class="slds-grid slds-nowrap">
+                    <div class="slds-col slds-size_2-of-12">
+                        <div class="slds-context-bar__icon-action">
+                            <button class="slds-button slds-context-bar__button" title="Opens the menu" onclick="{!c.toggleNavigation}">
+                                <svg class="slds-button__icon slds-icon_small" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#rows" />
+                                </svg>
+                            </button>
+                            <span class="slds-assistive-text">Open Menu</span>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_8-of-12">
+                        <div class="imd-global-header__logo"></div>
+                    </div>
+                    <div class="slds-col slds-size_2-of-12">
+                        <div class="slds-context-bar__icon-action imd-justify-flexend">
+                            <button class="slds-button" title="person name" aria-haspopup="true">
+                                <svg class="slds-avatar slds-avatar_circle slds-avatar_medium" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/action-sprite/svg/symbols.svg#user" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="slds-context-bar__secondary imd-context-bar__secondary" role="navigation">
+                <ul class="slds-grid">
+                    <li class="slds-context-bar__item slds-is-active">
+                        <a href="javascript:void(0)" class="slds-context-bar__label-action" title="Activity">
+                            <span class="slds-assistive-text">Current Page:</span>
+                            <span class="slds-truncate" title="Activity">Activity</span>
+                        </a>
+                    </li>
+                    <li class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_hover imd-nav-small-dropdown">
+                        <a href="javascript:void(0)" class="slds-context-bar__label-action">
+                            <span class="slds-truncate">Applications</span>
+                        </a>
+                        <div class="slds-context-bar__icon-action slds-p-left_none slds-show_small">
+                            <button class="slds-button slds-button_icon slds-context-bar__button" aria-haspopup="true" title="See the Applications">
+                                <svg class="slds-button__icon" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown" />
+                                </svg>
+                                <span class="slds-assistive-text">See the Applications</span>
+                            </button>
+                        </div>
+                        <div class="slds-dropdown slds-dropdown_right">
+                            <ul class="slds-dropdown__list" role="menu">
+                                <li class="slds-dropdown__item" role="presentation">
+                                    <a href="javascript:void(0)" role="menuitem" tabindex="-1">
+                                        Application 1
+                                    </a>
+                                </li>
+                                <li class="slds-dropdown__item" role="presentation">
+                                    <a href="javascript:void(0)" role="menuitem" tabindex="-1">
+                                        Application 2
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_hover imd-nav-small-dropdown">
+                        <a href="javascript:void(0)" class="slds-context-bar__label-action">
+                            <span class="slds-truncate">Programs</span>
+                        </a>
+                        <div class="slds-context-bar__icon-action slds-p-left_none slds-show_small">
+                            <button class="slds-button slds-button_icon slds-context-bar__button" aria-haspopup="true" title="See the Programs">
+                                <svg class="slds-button__icon" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown" />
+                                </svg>
+                                <span class="slds-assistive-text">See the Programs</span>
+                            </button>
+                        </div>
+                        <div class="slds-dropdown slds-dropdown_right">
+                            <ul class="slds-dropdown__list" role="menu">
+                                <li class="slds-dropdown__item" role="presentation">
+                                    <a href="javascript:void(0)" role="menuitem" tabindex="-1">
+                                        Program 1
+                                    </a>
+                                </li>
+                                <li class="slds-dropdown__item" role="presentation">
+                                    <a href="javascript:void(0)" role="menuitem" tabindex="-1">
+                                        Program 2
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_hover imd-nav-small-dropdown">
+                        <a href="javascript:void(0)" class="slds-context-bar__label-action">
+                            <span class="slds-truncate">My Profile</span>
+                        </a>
+                        <div class="slds-context-bar__icon-action slds-p-left_none slds-show_small">
+                            <button class="slds-button slds-button_icon slds-context-bar__button" aria-haspopup="true" title="See My Profile">
+                                <svg class="slds-button__icon" aria-hidden="true">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown" />
+                                </svg>
+                                <span class="slds-assistive-text">See My Profile</span>
+                            </button>
+                        </div>
+                        <div class="slds-dropdown slds-dropdown_right">
+                            <ul class="slds-dropdown__list" role="menu">
+                                <li class="slds-dropdown__item" role="presentation">
+                                    <a href="javascript:void(0)" role="menuitem" tabindex="-1">
+                                        My Profile 1
+                                    </a>
+                                </li>
+                                <li class="slds-dropdown__item" role="presentation">
+                                    <a href="javascript:void(0)" role="menuitem" tabindex="-1">
+                                        My Profile 2
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="slds-context-bar__item">
+                        <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Menu Item">
+                            <span class="slds-truncate" title="Menu Item">Support</span>
+                        </a>
+                    </li>
+                    <li class="slds-context-bar__item">
+                        <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Menu Item">
+                            <span class="slds-truncate" title="Menu Item">Go to IMD Homepage</span>
+                        </a>
+                    </li>
+                    <li class="slds-context-bar__item slds-hide_small">
+                        <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Menu Item">
+                            <span class="slds-truncate" title="Menu Item">Log Out</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="slds-context-bar__icon-action imd-close-action slds-hide_small">
+                    <button class="slds-button slds-button_icon slds-context-bar__button" aria-haspopup="true" title="Close the Menu" onclick="{!c.toggleNavigation}">
+                        <svg class="slds-button__icon" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+                        </svg>
+                        <span class="slds-assistive-text">Close the Menu</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+        <!-- / navigagion goes here -->
+    </div>
+    <script>
+
+
+    </script>
+
+</body>
+
+</html>

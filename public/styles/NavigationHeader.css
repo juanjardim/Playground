@@ -1,0 +1,98 @@
+@media (max-width: 767px) {
+  .THIS.imd-nav-header .slds-context-bar {
+    height: 3rem;
+    padding-left: 0; }
+    .THIS.imd-nav-header .slds-context-bar .imd-global-header__logo {
+      width: 61px;
+      height: 41px;
+      padding-right: 0;
+      margin-top: 2.5px;
+      background: url(https://www.imd.org/Content/Gateways/sprite-gateways.png) no-repeat -39px -113px transparent;
+      margin-left: auto;
+      margin-right: auto; }
+    .THIS.imd-nav-header .slds-context-bar .imd-justify-flexend {
+      justify-content: flex-end; }
+    .THIS.imd-nav-header .slds-context-bar .slds-context-bar__icon-action {
+      height: 100%; }
+    .THIS.imd-nav-header .slds-context-bar .slds-context-bar__primary {
+      width: 100%; }
+    .THIS.imd-nav-header .slds-context-bar .imd-context-bar__secondary {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 5;
+      -webkit-transition: -webkit-transform ease .35s, left ease .35s, top ease .35s, box-shadow ease .35s, right ease .35s;
+      transition: transform ease .35s, left ease .35s, top ease .35s, box-shadow ease .35s, right ease .35s; }
+      .THIS.imd-nav-header .slds-context-bar .imd-context-bar__secondary > ul {
+        max-width: 80%;
+        width: 100%;
+        border-right: 1px solid #D8D8D8;
+        flex-direction: column;
+        background-color: #FFF; }
+        .THIS.imd-nav-header .slds-context-bar .imd-context-bar__secondary > ul .slds-context-bar__item {
+          line-height: 60px;
+          max-width: 100%;
+          border-bottom: 1px solid #D8D8D8; }
+          .THIS.imd-nav-header .slds-context-bar .imd-context-bar__secondary > ul .slds-context-bar__item.imd-nav-small-dropdown {
+            flex-direction: column; }
+            .THIS.imd-nav-header .slds-context-bar .imd-context-bar__secondary > ul .slds-context-bar__item.imd-nav-small-dropdown > a {
+              border-bottom: 1px solid #D8D8D8;
+              text-decoration: none; }
+            .THIS.imd-nav-header .slds-context-bar .imd-context-bar__secondary > ul .slds-context-bar__item.imd-nav-small-dropdown .slds-dropdown {
+              position: relative;
+              width: 100%;
+              min-width: 100%;
+              float: none;
+              left: 0;
+              top: 0;
+              visibility: visible;
+              opacity: 1;
+              max-width: 100%;
+              border: none;
+              box-shadow: none;
+              border-radius: 0;
+              margin: 0;
+              padding: 0; }
+              .THIS.imd-nav-header .slds-context-bar .imd-context-bar__secondary > ul .slds-context-bar__item.imd-nav-small-dropdown .slds-dropdown:before {
+                height: 0; }
+              .THIS.imd-nav-header .slds-context-bar .imd-context-bar__secondary > ul .slds-context-bar__item.imd-nav-small-dropdown .slds-dropdown .slds-dropdown__item {
+                line-height: 60px;
+                border-bottom: 1px solid #D8D8D8; }
+                .THIS.imd-nav-header .slds-context-bar .imd-context-bar__secondary > ul .slds-context-bar__item.imd-nav-small-dropdown .slds-dropdown .slds-dropdown__item > a {
+                  padding-top: 0;
+                  padding-bottom: 0;
+                  padding-left: 1.75rem; }
+                .THIS.imd-nav-header .slds-context-bar .imd-context-bar__secondary > ul .slds-context-bar__item.imd-nav-small-dropdown .slds-dropdown .slds-dropdown__item:last-of-type {
+                  border-bottom: none; }
+          .THIS.imd-nav-header .slds-context-bar .imd-context-bar__secondary > ul .slds-context-bar__item.slds-is-active {
+            font-weight: 600; }
+      .THIS.imd-nav-header .slds-context-bar .imd-context-bar__secondary .imd-close-action {
+        background: #FAFAF9;
+        height: 100%;
+        padding: 0.75rem;
+        left: 0;
+        margin-left: 0;
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        cursor: pointer; }
+    .THIS.imd-nav-header .slds-context-bar.imd-close-menu .slds-context-bar__secondary {
+      left: -100%;
+      -webkit-transition: -webkit-transform ease .35s, left ease .35s, top ease .35s, box-shadow ease .35s, right ease .35s;
+      transition: transform ease .35s, left ease .35s, top ease .35s, box-shadow ease .35s, right ease .35s; } }
+
+@media (min-width: 767px) {
+  .THIS.imd-nav-header .imd-header .imd-global-header__logo {
+    margin-bottom: 0 !important;
+    float: left;
+    display: block;
+    width: 117px;
+    height: 92px;
+    background: url(https://www.imd.org/Content/Gateways/IMD_registration.svg) center center no-repeat, linear-gradient(transparent, transparent); }
+  .THIS.imd-nav-header .imd-header .slds-global-header_container .slds-global-header {
+    height: 6.125rem;
+    background-color: #e6e5e5;
+    box-shadow: none; }
+  .THIS.imd-nav-header .slds-context-bar {
+    margin-top: 8rem; }
+    .THIS.imd-nav-header .slds-context-bar .imd-context-bar__secondary {
+      justify-content: center; } }
