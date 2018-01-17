@@ -9,6 +9,9 @@
     .THIS.imd-program-journey .imd-previus-journey .imd-scroll-action,
     .THIS.imd-program-journey .imd-next-journey .imd-scroll-action {
       height: 100%; }
+      .THIS.imd-program-journey .imd-previus-journey .imd-scroll-action > button,
+      .THIS.imd-program-journey .imd-next-journey .imd-scroll-action > button {
+        height: 100%; }
   .THIS.imd-program-journey .imd-previus-journey {
     border-right: 1px solid #bdbdbd; }
   .THIS.imd-program-journey .imd-next-journey {
@@ -37,7 +40,7 @@
         border-right: 1px solid #bdbdbd;
         font-size: 22px;
         line-height: 50px; }
-        .THIS.imd-program-journey .imd-journeys .imd-journey .imd-journey-header .imd-journey-status span {
+        .THIS.imd-program-journey .imd-journeys .imd-journey .imd-journey-header .imd-journey-status span.imd-journey-step {
           padding: 0 20px; }
       .THIS.imd-program-journey .imd-journeys .imd-journey .imd-journey-header .slds-text-heading_medium {
         line-height: 50px; }
@@ -46,27 +49,3 @@
         padding: 0 20px 10px 20px;
         background-color: #dcdcdc;
         height: 100%; }
-
-@media (max-width: 767px) {
-  .THIS.imd-timeline .slds-timelime {
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px; }
-    .THIS.imd-timeline .slds-timelime .slds-timeline__item_expandable {
-      position: relative;
-      padding-bottom: 1rem; }
-      .THIS.imd-timeline .slds-timelime .slds-timeline__item_expandable:before {
-        content: '';
-        background: #dddbda;
-        height: 100%;
-        width: 2px;
-        position: absolute;
-        left: 2.15rem;
-        top: 0;
-        bottom: 0;
-        margin-left: 1px; }
-      .THIS.imd-timeline .slds-timelime .slds-timeline__item_expandable .slds-timeline__icon {
-        border: 2px solid #fff; }
-    .THIS.imd-timeline .slds-timelime .slds-media__figure {
-      margin-left: 18px;
-      z-index: 1; } }
